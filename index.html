@@ -35,7 +35,7 @@
     <!-- main screen -->
     <div class="main">
         <div class="screen">
-            <div class="start-screen" id="start-screen">
+            <div class="start-screen active" id="start-screen">
                 <input type="text" placeholder="Your name" maxlength="11" class="input-name" id="input-name">
                 <div class="btn" id="btn-level">
                     Easy
@@ -45,7 +45,7 @@
             </div>
 
             <!-- game screen -->
-            <div class="main-game active" id="game-screen">
+            <div class="main-game" id="game-screen">
                 <div class="main-sudoku-grid">
                     <!-- 81 cells -->
                     <div class="main-grid-cell"></div>
@@ -141,7 +141,7 @@
                 </div>
 
                 <div class="main-game-info-box main-game-info-time">
-                    <span id="game-time">10:20</span>
+                    <span id="game-time">00:00:00</span>
                     <div class="pause-btn" id="btn-pause">
                         <i class="bx bx-pause"></i>
                     </div>
@@ -163,10 +163,10 @@
             <!-- end game screen -->
 
             <!-- pause screen -->
-            <!-- <div class="pause-screen" id="pause-screen">
+            <div class="pause-screen" id="pause-screen">
                 <div class="btn btn-blue" id="btn-resume">Resume</div>
                 <div class="btn" id="btn-new-game">New game</div>
-            </div> -->
+            </div>
             <!-- end pause screen -->
 
             <!-- result screen -->

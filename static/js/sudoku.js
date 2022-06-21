@@ -45,9 +45,9 @@ const isSafe = (grid, row, col, value) => {
 }
 
 // find unassigned cell
-const findUassignedPos = (grid, pos) => {
-    for (let row = 0; row < CONSTANT.BOX_SIZE; row++) {
-        for (let col = 0; col < CONSTANT.BOX_SIZE; col++) {
+const findUnassignedPos = (grid, pos) => {
+    for (let row = 0; row < CONSTANT.GRID_SIZE; row++) {
+        for (let col = 0; col < CONSTANT.GRID_SIZE; col++) {
             if (grid[row][col] === CONSTANT.UNASSIGNED) {
                 pos.row = row;
                 pos.col = col;
@@ -90,7 +90,7 @@ const sudokuCreate = (grid) => {
         col: -1
     }
 
-    if (!findUassignedPos(grid, unassigned_pos)) return true;
+    if (!findUnassignedPos(grid, unassigned_pos)) return true;
 
     let number_list = shuffleArray([...CONSTANT.NUMBERS]);
 
@@ -123,7 +123,7 @@ const sudokuCheck = (grid) => {
         col: -1
     }
 
-    if (!findUassignedPos(grid, unassigned_pos)) return true;
+    if (!findUnassignedPos(grid, unassigned_pos)) return true;
 
     grid.forEach((row, i) => {
         row.forEach((num, j) => {
@@ -169,7 +169,7 @@ const sudokuGen = (level) => {
     //create the grid with values
     let check = sudokuCreate(sudoku);
 
-    if(check) {
+    if (check) {
         // depending on the level of the size
         // remove those much of elements
         let question = removeCells(sudoku, level);

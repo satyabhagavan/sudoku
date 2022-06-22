@@ -168,6 +168,7 @@ const sudokuGen = (level) => {
     let sudoku = newGrid(CONSTANT.GRID_SIZE);
     //create the grid with values
     let check = sudokuCreate(sudoku);
+    // console.table(sudoku);
 
     if (check) {
         // depending on the level of the size
